@@ -30,7 +30,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30 mb-6"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-primary/50 backdrop-blur-sm rounded-full border border-primary/30 mb-6"
             >
               <Star className="w-4 h-4 text-accent fill-accent" />
               <span className="text-primary-foreground text-sm font-medium">
