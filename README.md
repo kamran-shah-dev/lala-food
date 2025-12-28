@@ -28,20 +28,20 @@ https://your-live-domain.com
 - **shadcn/ui** — Accessible, customizable UI components
 
 ### Project Structure
-├── src
-│   ├── components     # Reusable UI components
-│   ├── pages          # Route-based pages
-│   ├── layouts        # Shared layouts
-│   ├── data           # Static data (menu, config)
-│   ├── assets         # Images & static files
-│   ├── utils          # Helper functions
-│   └── main.tsx       # Application entry point
-│
-├── public
-├── package.json
-├── tailwind.config.ts
-├── vite.config.ts
-└── README.md
+   - src
+       - components     # Reusable UI components
+       - pages          # Route-based pages
+       - layouts        # Shared layouts
+       - data           # Static data (menu, config)
+       - assets         # Images & static files
+       - utils          # Helper functions
+       - main.tsx       # Application entry point
+
+    - public
+    - package.json
+    - tailwind.config.ts
+    - vite.config.ts
+    - README.md
 
 ### Features
 
