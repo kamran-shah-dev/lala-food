@@ -72,14 +72,28 @@ export const Navbar = () => {
                 <span
                   className={`text-sm font-medium transition-colors duration-200 ${
                     location.pathname === link.path
-                      ? "text-primary"
-                      : "text-foreground/80 hover:text-primary"
+                    ? isScrolled
+                      ? "text-primary"     // RED after scroll
+                      : "text-[#EFBF04]"   // GOLD before scroll
+                      : isScrolled
+                        ? "text-black hover:text-primary"
+                        : "text-white hover:text-white/80"
                   }`}
+
                 >
                   {link.name}
                 </span>
                 <motion.span
-                  className="absolute -bottom-1 left-0 h-0.5 bg-primary rounded-full"
+                className={`absolute -bottom-1 left-0 h-0.5 rounded-full ${
+                  location.pathname === link.path
+                    ? isScrolled
+                      ? "bg-primary"     // RED underline after scroll
+                      : "bg-[#EFBF04]"   // GOLD underline before scroll
+                    : isScrolled
+                      ? "bg-primary"
+                      : "bg-white"
+                }`}
+
                   initial={{ width: 0 }}
                   animate={{
                     width: location.pathname === link.path ? "100%" : 0,
