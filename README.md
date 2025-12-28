@@ -36,7 +36,6 @@ https://your-live-domain.com
        - assets         # Images & static files
        - utils          # Helper functions
        - main.tsx       # Application entry point
-
     - public
     - package.json
     - tailwind.config.ts
