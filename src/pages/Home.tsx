@@ -107,12 +107,12 @@ const Home = () => {
               className="flex flex-wrap gap-6 mt-12"
             >
               <div className="flex items-center gap-2 text-primary-foreground/70">
-                <MapPin className="w-5 h-5 text-primary" />
-                <span className="text-sm">Airport Road, Quetta</span>
+                <MapPin className="w-5 h-5 text-[#E6B65C]" />
+                <span className="text-base text-white text-bold">Airport Road, Quetta</span>
               </div>
               <div className="flex items-center gap-2 text-primary-foreground/70">
-                <Clock className="w-5 h-5 text-primary" />
-                <span className="text-sm">Opens 12:30 PM</span>
+                <Clock className="w-5 h-5 text-primary text-[#E6B65C]" />
+                <span className="text-base text-white text-bold">Opens 12:30 PM</span>
               </div>
             </motion.div>
           </div>
