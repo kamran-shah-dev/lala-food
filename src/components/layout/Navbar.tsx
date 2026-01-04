@@ -16,6 +16,8 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const isHome = location.pathname === "/";
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,28 +74,31 @@ export const Navbar = () => {
                 <span
                   className={`text-sm font-medium transition-colors duration-200 ${
                     location.pathname === link.path
-                    ? isScrolled
-                      ? "text-primary"     // RED after scroll
-                      : "text-[#EFBF04]"   // GOLD before scroll
-                      : isScrolled
-                        ? "text-black hover:text-primary"
-                        : "text-white hover:text-white/80"
+                      ? isHome
+                        ? isScrolled
+                          ? "text-primary"
+                          : "text-[#EFBF04]"   // GOLD only on HOME
+                        : "text-primary"      // RED on other pages
+                      : isHome
+                        ? isScrolled
+                          ? "text-black hover:text-primary"
+                          : "text-white hover:text-white/80"
+                        : "text-black hover:text-primary"
                   }`}
-
                 >
                   {link.name}
                 </span>
-                <motion.span
-                className={`absolute -bottom-1 left-0 h-0.5 rounded-full ${
-                  location.pathname === link.path
-                    ? isScrolled
-                      ? "bg-primary"     // RED underline after scroll
-                      : "bg-[#EFBF04]"   // GOLD underline before scroll
-                    : isScrolled
-                      ? "bg-primary"
-                      : "bg-white"
-                }`}
 
+                <motion.span
+                  className={`absolute -bottom-1 left-0 h-0.5 rounded-full ${
+                    location.pathname === link.path
+                      ? isHome
+                        ? isScrolled
+                          ? "bg-primary"
+                          : "bg-[#EFBF04]"   // GOLD underline on HOME
+                        : "bg-primary"      // RED underline on other pages
+                      : "bg-transparent"
+                  }`}
                   initial={{ width: 0 }}
                   animate={{
                     width: location.pathname === link.path ? "100%" : 0,
@@ -101,6 +106,7 @@ export const Navbar = () => {
                   whileHover={{ width: "100%" }}
                   transition={{ duration: 0.2 }}
                 />
+
               </Link>
             ))}
           </div>
