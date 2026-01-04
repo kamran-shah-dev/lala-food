@@ -19,13 +19,21 @@ export const Navbar = () => {
   const isHome = location.pathname === "/";
 
 
+
   useEffect(() => {
+    if (!isHome) {
+      setIsScrolled(false);
+      return;
+    }
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isHome]);
+
 
   useEffect(() => {
     setIsOpen(false);
