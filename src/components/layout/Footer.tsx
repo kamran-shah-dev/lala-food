@@ -75,13 +75,13 @@ export const Footer = () => {
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-[#EFBF04] shrink-0 mt-0.5" />
                 <span className="text-background/70 text-sm">
                   Airport Road, Inside Al Mehmood Supermart, Quetta
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-primary shrink-0" />
+                <Phone className="w-5 h-5 text-[#EFBF04] shrink-0" />
                 <a
                   href="tel:03112111191"
                   className="text-background/70 hover:text-primary transition-colors text-sm"
@@ -90,7 +90,7 @@ export const Footer = () => {
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Clock className="w-5 h-5 text-primary shrink-0" />
+                <Clock className="w-5 h-5 text-[#EFBF04] shrink-0" />
                 <span className="text-background/70 text-sm">
                   Opens at 12:30 PM
                 </span>
@@ -110,15 +110,15 @@ export const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-background/70 text-sm">
-                <span className="w-2 h-2 bg-primary rounded-full" />
+                <span className="w-2 h-2 bg-[#EFBF04] rounded-full" />
                 Dine-in
               </li>
               <li className="flex items-center gap-2 text-background/70 text-sm">
-                <span className="w-2 h-2 bg-primary rounded-full" />
+                <span className="w-2 h-2 bg-[#EFBF04] rounded-full" />
                 Kerbside Pickup
               </li>
               <li className="flex items-center gap-2 text-background/70 text-sm">
-                <span className="w-2 h-2 bg-primary rounded-full" />
+                <span className="w-2 h-2 bg-[#EFBF04] rounded-full" />
                 No-contact Delivery
               </li>
             </ul>

@@ -52,7 +52,7 @@ export const Navbar = () => {
               <span className="text-2xl">🍴</span>
               <div className="flex flex-col">
                 <span className="text-xl md:text-2xl font-display font-bold text-primary">
-                  Lala's
+                  K's
                 </span>
                 <span className="text-xs font-medium text-muted-foreground -mt-1">
                   FOOD
